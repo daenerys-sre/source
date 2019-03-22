@@ -55,7 +55,7 @@ sys.__ghidra_state__ = _state
 
 # Assume program bitness based on the first memory block pointer size
 BADADDR = ea_t.init(
-    0xFFFFFFFFFFFFFFFFL if _currentProgram.getMinAddress().getPointerSize() == 8 else 0xFFFFFFFF,
+    0xFFFFFFFFFFFFFFFF if _currentProgram.getMinAddress().getPointerSize() == 8 else 0xFFFFFFFF,
     Address.NO_ADDRESS)
 
 
